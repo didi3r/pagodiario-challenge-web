@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>Agregar Usuario</h1>
+<div mat-dialog-content>
+  <p *ngIf="error" class="text-warn">{{ error }}</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre:</mat-label>
+    <input matInput [(ngModel)]="name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>A. Patterno:</mat-label>
+    <input matInput [(ngModel)]="middleName" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>A. Materno:</mat-label>
+    <input matInput [(ngModel)]="lastName" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>RFC:</mat-label>
+    <input matInput [(ngModel)]="rfc" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>F. de Nacimiento</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="birthDate" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="space-between">
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Cancelar</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="saveUser()"
+    [disabled]="!name || !middleName || !lastName || !rfc"
+  >
+    Guardar
+  </button>
+</div>
