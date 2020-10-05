@@ -25,4 +25,4 @@ La applicacion deberia de estar corriendo en: `http://localhost:4200`.
 Se desplegó una copia de la API en la plataforma heroku: `https://pagodiario-api.herokuapp.com/api/v1/user`
 
 Y la aplicación frontend en un bucket de Amazon S3:
-``
+`https://s3.us-east-2.amazonaws.com/pagodiario.didi3r.net/index.html`
