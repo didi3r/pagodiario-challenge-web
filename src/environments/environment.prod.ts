@@ -1,4 +1,4 @@
 export const environment = {
-  apiUrl: 'https://pagodiario-api.herokuapp.com/',
+  apiUrl: 'https://pagodiario-api.herokuapp.com',
   production: true
 };
